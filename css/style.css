@@ -104,6 +104,9 @@ body{
 .d-none{
     display: none;
 }
+.text-start {
+    text-align: start;
+}
 .text-center {
     text-align: center;
 }
@@ -439,7 +442,7 @@ header {
 .about-button {
     margin-top: 40px;
 }
-.about-button a {
+.about-button button {
     border: 1px solid #ff0839;
     background-color: #fff;
     font-size: 16px;
@@ -450,9 +453,10 @@ header {
     border-radius: 5px;
     margin-top: 30px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
-.about-content a:hover {
+.about-content button:hover {
     background-color: #ff0839;
     color: #fff;
 }
@@ -470,6 +474,54 @@ header {
 .about-content span{
     font-size: 12px;
 }
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    z-index: 1000; /* Sit on top */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+.CloseBtn{
+    position: relative;
+    left: 360px;
+    bottom: 510px;
+    border: 0;
+    background-color: transparent;
+    padding: 5px 10px;
+
+}
+.ContactSub span{
+    color: red;
+}
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+
+
 /* .title */
 
 .title {
@@ -568,26 +620,64 @@ header {
     display: flex;
     padding-top: 10px;
 }
-.service-button ul a {
+.service-button ul button {
     text-decoration: none;
     padding: 5px 10px;
     font-weight: 700;
     border: 1px solid transparent;
     line-height: 20px;
-    color: #ffffff;
+    color: #000;
     border-radius: 5px;
     transition: all 0.3s;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .service-button .tab_btn{
     background-color: #ff0839;
     color: #fff;
 }
-.service-button ul a:hover {
+.service-button ul button:hover {
     background-color: #ff0839;
     color: #fff;
 }
+.filter-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #ff0839; 
+    color: #fff; 
+}
+.ContactSub{
+    margin-bottom: 15px;
+}
+.ContactSub input{
+    margin-top: 10px;
+    padding: 10px;
+}
+.ContactSub textarea{
+    margin-top: 10px;
+}
+.ContactSubBtn{
+    padding: 10px 25px;
+    border: 0px;
+    cursor: pointer;
+}
+#Message{
+  height: 150px;  
+}
+.service-button{
+    margin-bottom: 20px;
+}
+.Contactmb
 /* .fix-bg */
 .fix-bg{
     padding-top: 30px;
